@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DRIstyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+.container {
+    width: 450px; /* Set your desired fixed width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text within the container */
+    margin: 0 auto; /* Center the container horizontally */
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #281fdc;
+            font-weight: bold;
+            font-size: 20px; /* Adjusted font size */
+        }
+
+        div {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #010101;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px; /* Adjusted padding */
+            background-color: #281fdc;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0ecd25;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: left; /* Align text to the left in the result section */
+        }
+
+        #resultSection h2 {
+            color: #0ecd25;
+        }
+
+        /* Back to Main Page link styling */
+        .back-link {
+            display: inline-block;
+            padding: 10px; /* Adjusted padding */
+            background-color: #281fdc;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #0ecd25;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image as the header -->
+        <img src="C:\Users\HP\Desktop\LG Smart TV\NC\Logo.jpg" alt="Header Image">
+        <h1>DRI Calculator</h1>
+
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" onchange="populateAgeOptions()">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="pregnant1">Pregnant Female Trimester 1</option>
+                <option value="pregnant2">Pregnant Female Trimester 2</option>
+                <option value="pregnant3">Pregnant Female Trimester 3</option>
+                <option value="lactating1">Lactating Female 0-6 Months</option>
+                <option value="lactating2">Lactating Female 6-12 Months</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="ageGroup">Age Group:</label>
+            <select id="ageGroup"></select>
+        </div>
+
+        <div>
+            <label for="nutrient">Select Nutrient:</label>
+            <select id="nutrient" onchange="handleNutrientSelection()">
+                <option value="eer">Estimated Energy Requirement (EER) cal/day</option>
+                <option value="carbohydrates">Carbohydrates g/day</option>
+                <option value="protein">Protein g/day</option>
+                <option value="totalFiber">Total Fiber g/day</option>
+                <option value="water">Water L/day</option>
+                <option value="vitamins">Vitamins</option>
+                <option value="minerals">Minerals</option>
+            </select>
+        </div>
+
+        <div id="subSelectionSection" style="display: none;">
+            <label for="subSelection">Select Sub-Nutrient:</label>
+            <select id="subSelection"></select>
+        </div>
+
+        <button onclick="calculateNutrition()">Calculate</button>
+
+        <div id="resultSection">
+            <h2>Calculation Result</h2>
+            <div id="result">Calculation result will appear here</div>
+        </div>
+
+        <!-- Link back to the main page -->
+        <a href="index.html" class="back-link">Back to Main Page</a>
+    </div>
+    <script src="DRIscript.js"></script>
+</body>
+</html>

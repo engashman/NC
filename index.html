@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductory Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px; /* Add margin for smaller screens */
+            background-color: #ffff; /* Set the background color */
+        }
+
+        #header-image {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #281fdc;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        p {
+            color: #0ecd25;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .option {
+            margin-bottom: 10px;
+            padding: 20px 30px;
+            background-color: #281fdc;
+            color: #ffff;
+            text-decoration: none;
+            border-radius: 15px;
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Add transition for smooth effect */
+        }
+
+        .option:hover {
+            background-color: #0ecd25; /* Change background color on hover */
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 600px) {
+            body {
+                margin: 10px; /* Example: adjust margin for even smaller screens */
+            }
+
+            h1 {
+                font-size: 20px;
+            font-weight: bold;
+            }
+
+            /* Add more styles as needed for smaller screens */
+        }
+    </style>
+</head>
+<body>
+    <img id="header-image" src="C:\Users\HP\Desktop\LG Smart TV\NC\Logo.jpg" alt="Header Image">
+    <h1>Welcome to Nutrition Calculator</h1>
+    <p>Choose an option to proceed</p>
+    
+    <div class="options">
+        <a href="BMI.html" class="option">BMI</a>
+        <a href="DRI.html" class="option">DRI</a>
+    </div>
+</body>
+</html>

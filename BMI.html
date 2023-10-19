@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BMIstyle.css">
+    <title>BMI Calculator</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0; /* Set margin to 0 to remove any default margin */
+    padding: 0; /* Set padding to 0 to remove any default padding */
+    background-color: #ffff; /* Set the background color */
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto; /* Remove top margin */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #281fdc;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #010101;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #281fdc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0ecd25;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    color: #010101;
+}
+
+#result {
+    color: #281fdc;
+}
+
+#status {
+    color: #010101;
+}
+
+#status-text {
+    font-weight: bold;
+}
+
+/* Back to Main Page link styling */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #281fdc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0ecd25;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image as the header -->
+        <img src="C:\Users\HP\Desktop\LG Smart TV\NC\Logo.jpg" alt="Header Image">
+        <h1>BMI Calculator</h1>
+        <div class="content">
+            <div class="input">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" required>
+            </div>
+
+            <div class="input">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" required>
+            </div>
+
+            <button class="calculate" onclick="calculateBMI();">Calculate BMI</button>
+        </div>
+        <div class="result">
+            <p>Your BMI is: <span id="result">00.00</span></p>
+            <p id="status">Status: <span id="status-text"></span></p>
+        </div>
+    </div>
+
+    <!-- Link back to the main page -->
+    <a href="index.html" class="back-link">Back to Main Page</a>
+
+    <script src="BMIscript.js"></script>
+</body>
+</html>
